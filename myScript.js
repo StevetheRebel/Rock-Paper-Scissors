@@ -1,5 +1,3 @@
-// Random "Rock, Paper, and Scissors Computer Selection"
-
 function getComputerChoice() {
 	const choice = ['rock', 'paper', 'scissors'];
 	const randomIndex = Math.floor(Math.random() * 3);
@@ -8,7 +6,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-	playerChoice = playerSelection.toLowerCase();
+	let playerChoice = playerSelection.toLowerCase();
 
 	const drawMsg = "It's a tie!";
 	const winMsg = `You win! ${playerChoice} beats ${computerSelection}`;
@@ -25,13 +23,13 @@ function playRound(playerSelection, computerSelection) {
 	}
 }
 
-function game() {
+function game(gamerRounds) {
 	let compWinCount = 0;
 	let playerWinCount = 0;
 
+	let gameRounds = prompt('How many rounds do you wanna play?');
 
-	for (i = 0; i <= 5; i++) {
-		// let gameRounds = prompt('How many rounds do you wanna play?');
+	for (let i = 0; i < gameRounds; i++) {
 		let playerSelection = prompt('Choose Rock, Paper or Scissors?');
 		let computerSelection = getComputerChoice();
 		let result = playRound(playerSelection, computerSelection);
@@ -42,13 +40,17 @@ function game() {
 		} else if (result.includes("lose")) {
 			compWinCount++;
 		}
-
-		if (playerWinCount >= gameRounds/2) {
-			console.log('You win!')
-		} else if (compWinCount >= gameRounds/2) {
-			console.log('You lose!')
-		} else {
-			console.log('You draw!')
-		}
 	}
+
+	if (playerWinCount > compWinCount) {
+		console.log('You win!')
+	} else if (compWinCount > playerWinCount) {
+		console.log('You lose!')
+	} else {
+		console.log('You draw!')
+	}
+	
+	console.log(compWinCount);
 }
+
+game();
