@@ -25,7 +25,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game(gamerRounds) {
+function game() {
   let compWinCount = 0;
   let playerWinCount = 0;
 
