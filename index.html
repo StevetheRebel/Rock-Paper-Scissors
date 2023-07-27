@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Rock Paper Scrissors</title>
-</head>
+  <body>
+    <header>
+      <h1>Rock, Paper, Scissors</h1>
+    </header>
 
-<body>
-	<script src="myScript.js"></script>
-</body>
+    <section class="main-container">
+      <div class="section1 card">
+        <div class="msg">
+          <p>Welcome to this simple game</p>
+          <p>By <span>Rebel</span></p>
+        </div>
 
+        <div class="input-area">
+          <div class="name_area">
+            <label for="playerName">Player Name:</label>
+            <input
+              type="text"
+              name="nameSpace"
+              id="playerName"
+              value=""
+              autocomplete="additional-name"
+            />
+          </div>
+          <div class="rounds_area">
+            <label for="playerRounds">No. of Rounds</label>
+            <input
+              type="number"
+              name="playerRounds"
+              id="playerRounds"
+              min="3"
+              max="10"
+            />
+          </div>
+        </div>
+        <button id="play-btn" class="btn">Play</button>
+      </div>
+    </section>
+
+    <section class="playSection">
+      <div class="section2 btns">
+        <button class="btn1" value="rock">Rock</button>
+        <button class="btn1" value="paper">Paper</button>
+        <button class="btn1" value="scissors">Scissors</button>
+      </div>
+    </section>
+
+    <div class="result-parent">
+      <div id="result_info" class="result"></div>
+      <button type="reset" value="result" id="reset">Reset</button>
+    </div>
+
+    <div class="parent">
+      <div class="outcomes" id="game-outcomes" class="game-outcome">
+        <ul class="col" id="win-col">
+          
+        </ul>
+        <ul class="col" id="draw-col">
+          
+        </ul>
+        <ul class="col" id="lose-col">
+          
+        </ul>
+      </div>
+    </div>
+
+    <footer>Copyright © Steve Mogan The Odin Project</footer>
+
+    <script src="myScript.js"></script>
+  </body>
 </html>
