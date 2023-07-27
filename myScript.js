@@ -77,8 +77,6 @@ function game() {
   }
 }
 
-
-
 playBtn.addEventListener("click", game);
 
 
