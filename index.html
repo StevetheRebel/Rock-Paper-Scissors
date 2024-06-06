@@ -8,7 +8,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>ROCK, PAPER, SCOSSORS</h1>
+    <header>
+      <h1>ROCK✊🏽, PAPER✋🏽, SCISSORS✂</h1>
+    </header>
+    <main>
+      <section class="display">
+        <div class="display-ctn">
+          <div class="count-ctn">
+            <div id="player-count">_ _</div>
+            <span>:</span>
+            <div id="comp-count">_ _</div>
+          </div>
+          <div class="picks-ctn">
+            <div class="pick player-pick">✋🏽</div>
+            <div class="comment-ctn">
+              <h2>You win</h2>
+              <p><span>paper</span> beats <span>scissors</span></p>
+            </div>
+            <div class="pick comp-pick">✂</div>
+          </div>
+        </div>
+      </section>
+      <section class="play-ctn">
+        <div class="playpicks-ctn">
+          <div class="playpick" id="rock">✊🏽</div>
+          <div class="playpick" id="paper">✋🏽</div>
+          <div class="playpick" id="scissors">✂</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>The Odin Project &copy; Steve Okoth</p>
+    </footer>
+
     <script src="myScript.js"></script>
   </body>
 </html>
